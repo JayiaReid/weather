@@ -1,38 +1,246 @@
-.App {
-  text-align: center;
+#search{
+    padding: 0.5em;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    height: 50px;
+    width: 80%;
+    content: rgb(0, 0, 0);
+    color: rgb(0, 0, 0) !important;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+}
+#search::placeholder{
+    color: rgb(0, 0, 0);
+   text-align: left;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#Search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+form{
+    display: flex;
+    border: 2px solid black;
+    margin: 0;
+    padding: 0;
+    height: 62px;
+    width:40%; 
+    
+}
+
+
+#Search img{
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 2%;
+}
+
+#Search img:hover{
+    cursor: pointer;
+}
+
+#body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    /* justify-content: center; */
+    padding-bottom: 2em;
+}
+
+#overview{
+    background-color: rgba(255, 255, 255, 0.153);
+    padding: 1.5em;
+    margin-top: 5%;
+    border: 1px solid rgba(0, 0, 0, 0.038);
+    backdrop-filter: blur(5px);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.471);
+    /* font-size: 2em; */
+    width: 87%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* padding: 10px; */
+    border-radius: 10px;
+}
+
+#details{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+}
+
+#weather_details{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+
+.vertical-line {
+    border-left: 2px solid black;
+    height: 200px; 
+    margin: 0;
   }
+
+.temp{
+    font-size: 7em;
+    margin-top: 0;
+} 
+
+.w_desc {
+    font-size: 3em;
+    margin: 0;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.w_emoji{
+    font-size: 8em;
+    margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.temps{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 55%;
+    font-size: 2em;
+    position: absolute;
+    gap: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#temps{
+    display: flex;
+    flex-direction: column;
+}
+
+.t_icon{
+    width: 50px;
+    height: auto;
+}
+.t{
+    display: flex;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    width: 90%;
+    margin-top: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#wind {
+    grid-column: 1 / span 2;
+}
+
+#feels, #sun {
+    grid-column: span 1;
+}
+.tag{
+    color: rgba(0, 0, 0, 0.645);
+    font: 1em;
+}
+
+/* .card img{
+    width: 350px;
+} */
+
+.tag img{
+    width: 50px;
+}
+
+#feels .content{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.tag{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .info{
+    font-size: 5em;
+   
+} */
+
+#feels .info{
+    font-size: 15em; 
+    margin: 0;
+    text-align: center;
+}
+
+/* #sun{
+    display: flex;
+    flex-direction: row;
+    
+    
+} */
+
+#sun .content img{
+    width: 250px;
+}
+
+#sun .content{
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.wind_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.wind_content_content{
+    display: flex;
+    flex-direction: column;
+}
+
+#wind .info{
+    font-size: 10em;
+}
+
+#speed{
+    border-bottom: 2px solid black;
+}
+
+#wind .content{
+    display: flex;
+    flex-direction: row;
+   margin-left: 5%;
+   justify-content: space-evenly;
+}
+
+.wind_details{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    font-size: 2em;
 }

@@ -17,7 +17,7 @@ import windImg from './Assets/wind-farm.png'
 import sunIcon from './Assets/sun.png';
 
 function App() {
-  const key = '72b4b36469f1cca98640257e846eea16';
+  const key = 'api_key';
   // const city = document.getElementById('search').value
 
   const [city, setCity]=useState('Toronto');

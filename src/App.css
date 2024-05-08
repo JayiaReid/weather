@@ -143,6 +143,18 @@ form{
     backdrop-filter: blur(5px);
 }
 
+@media (max-width: 1000px) {
+    #cards{
+        display: flex ;
+        flex-direction: column;
+        /* background-color: black; */
+        font-size: 1em;
+    }
+    .card img{
+        width: 100px
+    }
+}
+
 .card {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 10px;
@@ -243,4 +255,9 @@ form{
     flex-direction: column; 
     justify-content: center;
     font-size: 2em;
+}
+
+#err_m{
+    height: 100vh;
+    font-size: 3em;
 }

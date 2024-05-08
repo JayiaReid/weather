@@ -184,7 +184,10 @@ return formattedDate;
 
       {/* //display details */}
       {errorMessage ? (
+        <div id='err_m'>
+
           <p>{errorMessage}</p>
+          </div>
         ) : (<>
         <div id='overview'>
 
@@ -254,7 +257,7 @@ return formattedDate;
           </div>
         </div>
     
-        </>)};
+        </>)}
       </div>
   
   );
